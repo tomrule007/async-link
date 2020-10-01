@@ -1,0 +1,14 @@
+{
+  "name": "heroku-spinup-redirect",
+  "version": "1.0.0",
+  "description": "A landing page that auto redirects to heroku app when it finishes bootup",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "heroku"
+  ],
+  "author": "Thomas J. Herzog",
+  "license": "ISC"
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Asycn Link</title>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Asycn Link</h1>
+      <p>
+        Small utility to add async style request to links that may take a while
+        to respond the first time.
+        <br />
+      </p>
+    </header>
+    <main>
+      <form>
+        <label for="url"> Url:<input name="url" type="url" required /></label>
+        <br />
+        <label for="redirect">
+          Auto Redirect:<input name="redirect" type="checkbox"
+        /></label>
+        <br />
+        <label for="delay">
+          Mock delay:<input
+            type="range"
+            min="0"
+            max="30"
+            value="0"
+            class="slider"
+            name="delayRange"
+            oninput="this.form.delay.value=this.value"
+          />
+          <input
+            type="number"
+            name="delay"
+            min="0"
+            max="30"
+            value="0"
+            oninput="this.form.delayRange.value=this.value"
+          />seconds</label
+        >
+        <br />
+        <button onclick="submit">Create Async Link</button>
+      </form>
+      <div id="asyncLink" class="hidden">
+        <a id="theLink" href=""></a>
+        <button id="abortButton" class="hidden">Abort</button>
+      </div>
+    </main>
+    <button id="editButton" class="hidden">New Async Link</button>
+    <script src="../index.js" async defer></script>
+    <script src="./demo.js" async defer></script>
+  </body>
+</html>

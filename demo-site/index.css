@@ -1,0 +1,67 @@
+body {
+  max-width: 400px;
+  margin: 2em auto;
+
+  text-align: center;
+  background-color: rgb(248, 249, 250);
+}
+label,
+input,
+button,
+form,
+a {
+  margin: 0.5rem;
+  position: relative;
+}
+.hidden {
+  display: none;
+}
+
+.readyZone {
+  text-align: center;
+}
+
+main {
+  box-sizing: border-box;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 2em;
+  box-shadow: 3px 3px 5px 6px #ccc;
+  padding: 0.5em;
+}
+
+/* https://stephanwagner.me/only-css-loading-spinner */
+
+@keyframes spinner {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loading:before {
+  content: '';
+  box-sizing: border-box;
+  position: absolute;
+  top: 50%;
+  left: -10px;
+  width: 20px;
+  height: 20px;
+  margin-top: -10px;
+  margin-left: -10px;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+  border-top-color: #000;
+  animation: spinner 0.6s linear infinite;
+}
+
+.success:before {
+  content: '✔️';
+  color: green;
+  font-weight: bolder;
+}
+
+.failure:before {
+  content: '❌';
+  color: red;
+  font-weight: bolder;
+}
